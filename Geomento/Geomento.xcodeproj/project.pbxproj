@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		BF42DD761B9618710096167C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD751B9618710096167C /* AppDelegate.swift */; };
-		BF42DD781B9618710096167C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD771B9618710096167C /* ViewController.swift */; };
+		BF42DD781B9618710096167C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD771B9618710096167C /* BaseViewController.swift */; };
 		BF42DD7B1B9618710096167C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF42DD791B9618710096167C /* Main.storyboard */; };
 		BF42DD7E1B9618710096167C /* Geomento.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD7C1B9618710096167C /* Geomento.xcdatamodeld */; };
 		BF42DD801B9618710096167C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF42DD7F1B9618710096167C /* Assets.xcassets */; };
 		BF42DD831B9618710096167C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF42DD811B9618710096167C /* LaunchScreen.storyboard */; };
+		BF42DD8C1B961A780096167C /* Spot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD8A1B961A780096167C /* Spot+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		BF42DD8D1B961A780096167C /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD8B1B961A780096167C /* Spot.swift */; settings = {ASSET_TAGS = (); }; };
+		BF42DD921B961AEC0096167C /* SpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD911B961AEC0096167C /* SpotsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BF42DD961B961DEB0096167C /* PersitenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD951B961DEB0096167C /* PersitenceManager.swift */; settings = {ASSET_TAGS = (); }; };
+		BF42DD981B9623470096167C /* EditSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD971B9623470096167C /* EditSpotViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BF42DD9B1B962E820096167C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD9A1B962E820096167C /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF42DD721B9618710096167C /* Geomento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geomento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF42DD751B9618710096167C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF42DD771B9618710096167C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF42DD771B9618710096167C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BF42DD7A1B9618710096167C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF42DD7D1B9618710096167C /* Geomento.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Geomento.xcdatamodel; sourceTree = "<group>"; };
 		BF42DD7F1B9618710096167C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF42DD821B9618710096167C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF42DD841B9618710096167C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF42DD8A1B961A780096167C /* Spot+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Spot+CoreDataProperties.swift"; path = "Geomento/Spot+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BF42DD8B1B961A780096167C /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spot.swift; path = Geomento/Spot.swift; sourceTree = "<group>"; };
+		BF42DD911B961AEC0096167C /* SpotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotsViewController.swift; sourceTree = "<group>"; };
+		BF42DD951B961DEB0096167C /* PersitenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersitenceManager.swift; sourceTree = "<group>"; };
+		BF42DD971B9623470096167C /* EditSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSpotViewController.swift; sourceTree = "<group>"; };
+		BF42DD9A1B962E820096167C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,62 @@
 		BF42DD741B9618710096167C /* Geomento */ = {
 			isa = PBXGroup;
 			children = (
-				BF42DD751B9618710096167C /* AppDelegate.swift */,
-				BF42DD771B9618710096167C /* ViewController.swift */,
-				BF42DD791B9618710096167C /* Main.storyboard */,
+				BF42DD991B962E780096167C /* Utils */,
+				BF42DD941B961DD40096167C /* Shared Instances */,
+				BF42DD8E1B961A7E0096167C /* Model */,
+				BF42DD8F1B961A850096167C /* Controllers */,
+				BF42DD901B961A8F0096167C /* Views */,
 				BF42DD7F1B9618710096167C /* Assets.xcassets */,
-				BF42DD811B9618710096167C /* LaunchScreen.storyboard */,
+				BF42DD751B9618710096167C /* AppDelegate.swift */,
 				BF42DD841B9618710096167C /* Info.plist */,
 				BF42DD7C1B9618710096167C /* Geomento.xcdatamodeld */,
 			);
 			path = Geomento;
+			sourceTree = "<group>";
+		};
+		BF42DD8E1B961A7E0096167C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF42DD8A1B961A780096167C /* Spot+CoreDataProperties.swift */,
+				BF42DD8B1B961A780096167C /* Spot.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BF42DD8F1B961A850096167C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF42DD771B9618710096167C /* BaseViewController.swift */,
+				BF42DD911B961AEC0096167C /* SpotsViewController.swift */,
+				BF42DD971B9623470096167C /* EditSpotViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BF42DD901B961A8F0096167C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF42DD811B9618710096167C /* LaunchScreen.storyboard */,
+				BF42DD791B9618710096167C /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BF42DD941B961DD40096167C /* Shared Instances */ = {
+			isa = PBXGroup;
+			children = (
+				BF42DD951B961DEB0096167C /* PersitenceManager.swift */,
+			);
+			name = "Shared Instances";
+			sourceTree = "<group>";
+		};
+		BF42DD991B962E780096167C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BF42DD9A1B962E820096167C /* Utils.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +157,7 @@
 				TargetAttributes = {
 					BF42DD711B9618710096167C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = DG6DDPED4N;
 					};
 				};
 			};
@@ -137,8 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF42DD981B9623470096167C /* EditSpotViewController.swift in Sources */,
+				BF42DD921B961AEC0096167C /* SpotsViewController.swift in Sources */,
+				BF42DD9B1B962E820096167C /* Utils.swift in Sources */,
 				BF42DD7E1B9618710096167C /* Geomento.xcdatamodeld in Sources */,
-				BF42DD781B9618710096167C /* ViewController.swift in Sources */,
+				BF42DD8C1B961A780096167C /* Spot+CoreDataProperties.swift in Sources */,
+				BF42DD8D1B961A780096167C /* Spot.swift in Sources */,
+				BF42DD961B961DEB0096167C /* PersitenceManager.swift in Sources */,
+				BF42DD781B9618710096167C /* BaseViewController.swift in Sources */,
 				BF42DD761B9618710096167C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,10 +318,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Geomento/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlefacto.Geomento;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -263,10 +335,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Geomento/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlefacto.Geomento;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -289,6 +367,7 @@
 				BF42DD891B9618710096167C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
