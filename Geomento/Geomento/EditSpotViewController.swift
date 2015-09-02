@@ -13,6 +13,7 @@ class EditSpotViewController: BaseViewController, UITextViewDelegate {
     
     var spot:Spot?
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var textView: UITextView!
 
@@ -20,6 +21,14 @@ class EditSpotViewController: BaseViewController, UITextViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.mapView.addAnnotation(self.spot!)
+        self.mapView.showAnnotations([self.spot!], animated: true)
+        self.textView.text = self.spot?.comments
+        self.scrollView.scrollEnabled = false
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        try! PersitenceManager.sharedInstance.managedObjectContext?.save()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,17 +42,4 @@ class EditSpotViewController: BaseViewController, UITextViewDelegate {
         self.spot?.comments = self.textView.text
     }
 
-    // MARK: - IBAction
-
-    @IBAction func cancelButton(sender: AnyObject) {
-        
-        PersitenceManager.sharedInstance.managedObjectContext?.rollback()
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func saveButton(sender: AnyObject) {
-        try! PersitenceManager.sharedInstance.managedObjectContext?.save()
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
 }
