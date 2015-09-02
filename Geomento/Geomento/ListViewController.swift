@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import CoreLocation
 
-class ListViewController: SpotsViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
+class ListViewController: SpotsViewController, UITableViewDataSource, UITableViewDelegate {
     
     let cellIdentifier = "SpotCellIdentifier"
     
@@ -41,49 +41,19 @@ class ListViewController: SpotsViewController, UIImagePickerControllerDelegate, 
     
     // MARK: - Methods
     
-    func refreshData() {
+    override func refreshData() {
         self.fetchPersistedSpotList()
+        self.spotList!.sortInPlace { (firstElement, secondElement) -> Bool in
+            return firstElement.creationDate!.compare(secondElement.creationDate!) == .OrderedDescending
+        }
         self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
     }
     
     // MARK: - IBAction
     
     @IBAction func addButton(sender: AnyObject) {
-        
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.modalPresentationStyle = .CurrentContext
-        imagePickerController.sourceType = .Camera
-        imagePickerController.allowsEditing = false
-        imagePickerController.delegate = self
-        
-        self.presentViewController(imagePickerController, animated: true, completion: nil)
+        self.addNewSpot()
     }
-    
-    // MARK: - UIImagePickerControllerDelegate
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        let capturedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let resizedImage = Utils.resizeImage(capturedImage, toSize: CGSizeMake(480, 640))
-        let newSpot = NSEntityDescription.insertNewObjectForEntityForName("Spot", inManagedObjectContext: PersitenceManager.sharedInstance.managedObjectContext!) as! Spot
-        newSpot.photo = resizedImage
-        
-        if self.locationManager.location != nil {
-            newSpot.latitude = self.locationManager.location!.coordinate.latitude
-            newSpot.longitude = self.locationManager.location!.coordinate.longitude
-        }
-        
-        newSpot.creationDate = NSDate()
-        newSpot.modificationDate = NSDate()
-        
-        self.spotList?.insert(newSpot, atIndex: 0)
-        self.dismissViewControllerAnimated(true) { () -> Void in
-            try! PersitenceManager.sharedInstance.managedObjectContext?.save()
-            self.refreshData()
-        }
-        
-    }
-    
-    
     
     // MARK: - UITableViewDataSource
     

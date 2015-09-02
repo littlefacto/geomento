@@ -22,10 +22,11 @@ class MapViewController: SpotsViewController, MKMapViewDelegate {
         self.mapView.addAnnotations(self.spotList!)
         self.mapView.showAnnotations(self.spotList!, animated: true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.refreshData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -35,6 +36,24 @@ class MapViewController: SpotsViewController, MKMapViewDelegate {
             
             detailSpotVC.spot = spot
         }
+    }
+    
+    // MARK: - Methods
+    
+    override func refreshData() {
+        let displayedAnnotations = Set(self.mapView.annotations as! [Spot])
+        let allAnnotations = Set(self.spotList!)
+        
+        let notDisplayedAnnotations = allAnnotations.subtract(displayedAnnotations)
+        
+        self.mapView.addAnnotations(Array(notDisplayedAnnotations))
+        self.mapView.showAnnotations(Array(notDisplayedAnnotations), animated: true)
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func addButton(sender: AnyObject) {
+        self.addNewSpot()
     }
     
     // MARK: - MKMapViewDelegate

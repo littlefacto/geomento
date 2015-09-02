@@ -23,6 +23,15 @@ class Spot: NSManagedObject, MKAnnotation {
     
     var title: String? {
         get {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.timeStyle = .NoStyle;
+            dateFormatter.dateStyle = .MediumStyle;
+            return dateFormatter.stringFromDate(self.creationDate!)
+        }
+    }
+    
+    var subtitle: String? {
+        get {
             return self.comments
         }
     }
