@@ -22,6 +22,7 @@ class ListViewController: SpotsViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView.contentInset = UIEdgeInsetsMake(-50, 0, 0, 0)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -62,11 +63,13 @@ class ListViewController: SpotsViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as! SpotTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)!
         let spot = self.spotList![indexPath.row]
         
-        cell.photoView.image = spot.photo as? UIImage
-        cell.label.text = spot.comments
+        cell.textLabel?.text = spot.title
+        cell.detailTextLabel?.text = spot.subtitle
+        cell.imageView?.contentMode = .ScaleAspectFit
+        cell.imageView?.image = spot.photo as? UIImage
         
         return cell
     }
@@ -75,10 +78,6 @@ class ListViewController: SpotsViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 340
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {

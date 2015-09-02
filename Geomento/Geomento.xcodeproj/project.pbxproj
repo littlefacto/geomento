@@ -19,7 +19,6 @@
 		BF42DD961B961DEB0096167C /* PersitenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD951B961DEB0096167C /* PersitenceManager.swift */; settings = {ASSET_TAGS = (); }; };
 		BF42DD981B9623470096167C /* EditSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD971B9623470096167C /* EditSpotViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BF42DD9B1B962E820096167C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42DD9A1B962E820096167C /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
-		BFA5230D1B976343007F25E3 /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5230C1B976343007F25E3 /* SpotTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		BFD99D001B977C460088EE35 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD99CFF1B977C460088EE35 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BFD99D021B977CA20088EE35 /* SpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD99D011B977CA20088EE35 /* SpotsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		BF42DD951B961DEB0096167C /* PersitenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersitenceManager.swift; sourceTree = "<group>"; };
 		BF42DD971B9623470096167C /* EditSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSpotViewController.swift; sourceTree = "<group>"; };
 		BF42DD9A1B962E820096167C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		BFA5230C1B976343007F25E3 /* SpotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		BFD99CFF1B977C460088EE35 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BFD99D011B977CA20088EE35 /* SpotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +112,6 @@
 			children = (
 				BF42DD811B9618710096167C /* LaunchScreen.storyboard */,
 				BF42DD791B9618710096167C /* Main.storyboard */,
-				BFA5230C1B976343007F25E3 /* SpotTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -211,7 +208,6 @@
 				BF42DD981B9623470096167C /* EditSpotViewController.swift in Sources */,
 				BF42DD921B961AEC0096167C /* ListViewController.swift in Sources */,
 				BF42DD9B1B962E820096167C /* Utils.swift in Sources */,
-				BFA5230D1B976343007F25E3 /* SpotTableViewCell.swift in Sources */,
 				BF42DD7E1B9618710096167C /* Geomento.xcdatamodeld in Sources */,
 				BF42DD8C1B961A780096167C /* Spot+CoreDataProperties.swift in Sources */,
 				BF42DD8D1B961A780096167C /* Spot.swift in Sources */,
