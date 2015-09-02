@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1949" y="399"/>
         </scene>
-        <!--Edit Spot View Controller-->
+        <!--Detail Spot View Controller-->
         <scene sceneID="vAW-pQ-fGK">
             <objects>
-                <viewController id="WP0-Kt-iUF" customClass="EditSpotViewController" customModule="Geomento" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WP0-Kt-iUF" customClass="DetailSpotViewController" customModule="Geomento" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dx5-T1-Fiv"/>
                         <viewControllerLayoutGuide type="bottom" id="FY5-HQ-Ke0"/>

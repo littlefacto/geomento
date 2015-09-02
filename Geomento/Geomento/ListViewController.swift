@@ -33,7 +33,7 @@ class ListViewController: SpotsViewController, UITableViewDataSource, UITableVie
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SpotDetailsSegueFromList" {
-            let spotDetailsVC = segue.destinationViewController as! EditSpotViewController
+            let spotDetailsVC = segue.destinationViewController as! DetailSpotViewController
             let selectedSpot = self.spotList![self.tableView .indexPathForSelectedRow!.row]
             
             spotDetailsVC.spot = selectedSpot

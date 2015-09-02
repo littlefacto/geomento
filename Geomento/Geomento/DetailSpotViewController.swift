@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class EditSpotViewController: BaseViewController, UITextViewDelegate {
+class DetailSpotViewController: BaseViewController, UITextViewDelegate {
     
     var spot:Spot?
     

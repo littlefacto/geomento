@@ -31,7 +31,7 @@ class MapViewController: SpotsViewController, MKMapViewDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SpotDetailsSegueFromMap" {
-            let detailSpotVC = segue.destinationViewController as! EditSpotViewController
+            let detailSpotVC = segue.destinationViewController as! DetailSpotViewController
             let spot = self.mapView.selectedAnnotations.first as! Spot
             
             detailSpotVC.spot = spot
