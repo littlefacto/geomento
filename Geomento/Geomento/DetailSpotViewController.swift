@@ -20,7 +20,8 @@ class DetailSpotViewController: UITableViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.        
+        // Do any additional setup after loading the view.
+        
         self.imageView.image = self.spot?.photo as? UIImage
         self.textView.text = self.spot?.comments
         self.mapView.addAnnotation(self.spot!)
