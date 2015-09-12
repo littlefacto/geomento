@@ -144,7 +144,7 @@
         <scene sceneID="0lz-cD-jBh">
             <objects>
                 <tableViewController id="Jgy-2L-WdA" customClass="DetailSpotViewController" customModule="Geomento" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="gfS-of-Q6p">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="gfS-of-Q6p">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,6 +211,10 @@
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xp-bj-2RW">
                                                     <rect key="frame" x="8" y="8" width="584" height="184"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="SkI-sD-cA6" appends="YES" id="1TQ-ex-sbQ"/>
+                                                    </connections>
                                                 </mapView>
                                             </subviews>
                                             <constraints>
@@ -236,6 +240,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tnq-N2-4gq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SkI-sD-cA6">
+                    <connections>
+                        <action selector="mapClicked:" destination="Jgy-2L-WdA" id="wIw-d3-5h5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2795" y="690"/>
         </scene>
