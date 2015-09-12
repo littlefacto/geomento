@@ -9,22 +9,24 @@
 import UIKit
 import MapKit
 
-class DetailSpotViewController: BaseViewController, UITextViewDelegate {
+class DetailSpotViewController: UITableViewController, UITextViewDelegate {
     
     var spot:Spot?
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var textView: UITextView!
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView.contentInset = UIEdgeInsetsMake(-50, 0, 0, 0)
+        
+        self.imageView.image = self.spot?.photo as? UIImage
+        self.textView.text = self.spot?.comments
         self.mapView.addAnnotation(self.spot!)
         self.mapView.showAnnotations([self.spot!], animated: true)
-        self.textView.text = self.spot?.comments
-        self.scrollView.scrollEnabled = false
     }
     
     override func viewWillDisappear(animated: Bool) {
