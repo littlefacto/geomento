@@ -82,7 +82,7 @@
         <scene sceneID="csQ-fe-ekP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jKL-QX-lDq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="Qhj-jd-pHy"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list" selectedImage="list" id="Qhj-jd-pHy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6f2-Mu-jx0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -155,7 +155,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uya-g2-eFg" id="E7v-eP-q52">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NTb-oQ-rcP">
@@ -178,7 +178,7 @@
                                         <rect key="frame" x="0.0" y="320" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gjb-ew-muM" id="7Kx-H4-bRF">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cxa-tD-Mbn">
@@ -207,7 +207,7 @@
                                         <rect key="frame" x="0.0" y="548" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tv4-AM-mhs" id="R6M-rZ-wWf">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xp-bj-2RW">
@@ -271,7 +271,7 @@
         <scene sceneID="IN9-FG-1pT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JFx-sc-ewr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="xKX-4h-piX"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="xKX-4h-piX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gRH-wN-0ED">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -287,6 +287,10 @@
             <point key="canvasLocation" x="1142" y="1367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list" width="24" height="17"/>
+        <image name="map" width="20" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4Y5-hI-KAX"/>
     </inferredMetricsTieBreakers>
